@@ -1,0 +1,34 @@
+<div class="head">
+    <h2>Panel List</h2>
+</div>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Panel ID</th>
+                <th>Panel Status</th>
+                <th>Panel Members</th>
+                <th>Panel Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Panel of panels">
+                <td>{{ Panel.panelNumber }}</td>
+                <td><label><input type="checkbox" name="isActive" [checked]="Panel.isActive"> Active</label></td>
+                
+                <td><button routerLink="create-panel" routerLinkActive="active">Add Panelist</button></td>
+                <td>
+                    <button  (click)="updatePanel(Panel.panelNumber)" class="btn btn-secondary" style="margin-left: 10px">
+                        Update
+                        
+                    </button>
+                    <button (click)="deletePanel(Panel.panelNumber)"  class="btn btn-danger" style="margin-left: 10px">
+                        Delete
+                         
+                    </button>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

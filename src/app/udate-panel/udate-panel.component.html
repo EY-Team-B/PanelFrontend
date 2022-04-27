@@ -1,0 +1,31 @@
+<form>
+    <div class="main">
+        <div class="col-md-6 offset-md-3">
+            <h2>UPDATE PANEL</h2>
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label><b>Panel Id :</b> </label>
+                    <input type="number" class="form-control" [(ngModel)]="panel.panelNumber"
+              id=" Pid" name="name" />
+                </div>
+                <br />
+
+                <div class="form-group">
+                    <label><b>Panel Members :</b></label>
+                    
+                </div>
+                <br />
+
+                <div class="form-group">
+                    <label> <b>Status :</b></label>
+                    <input type="checkbox" class="form-control" [(ngModel)]="panel.isActive" id="status" name="status" />
+                </div>
+                <br />
+
+                
+
+                <button class="btn btn-success" type="submit">Submit</button><br /><br />
+            </form>
+        </div>
+    </div>
+</form>
